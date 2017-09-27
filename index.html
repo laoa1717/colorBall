@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>COLORON GAME</title>
+	<meta name="author" content="maomao"/>             
+	<meta name="keyword" content="COLORON GAME"/>
+	<meta name="description" content="COLORON GAME: inspiring developers to use SVG Animations, ES6 and Flexbox"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<p>全屏模式</p>
+	<!-- logo部分 -->
+	<div class="logo common" id="logo">
+		<div class="logo_color" id="div1">
+			<span>C</span>
+			<span>O</span>
+			<span>L</span>
+			<span>O</span>
+			<span>R</span>
+			<span>O</span>
+			<span>N</span>
+		</div>
+		<div class="logo_play">
+		   <div><a href="#" id="playBtn">play</a></div>
+		   <p>注意：红色优先</p>
+		</div>
+	</div>
+	<!-- how to play -->
+	<div class="Toplay common" id="Toplay">
+		<div id="Toplay_1">
+			<p>弹跳球<br>改变颜色</p>
+			<div class="boll"></div>
+		</div>
+		<div id="Toplay_2">
+			<p>点击栏切换颜色<br>( 红,黄,紫 )</p>
+			<div>
+				<div id="one"></div>
+				<div id="two"></div>
+				<div id="three"></div>
+			</div>
+		</div>
+		<div id="Toplay_3">
+			<p>总是匹配<br>柱子颜色</p>
+			<div class="boll"></div>
+			<div id="four"></div>
+		</div>
+	</div>
+	<!-- 云 -->
+	<div id="cloud"></div>
+	<div id="waves">
+	    <div id="top_wave"></div>
+	    <div id="wave1"></div>
+	    <div id="wave2"></div>
+	    <div id="wave3"></div>
+	    <div id="wave4"></div>
+  	</div>
+  	<div id="mounts">
+	    <div id="mount1"></div>
+	    <div id="mount2"></div>
+    </div>
+    <div id="playBall"></div>
+    <div id="stickBox">
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    	<span class="stick"></span>
+    </div>
+    <div id="score">0</div>
+    <div id="scorecard">
+		<h2>寓言</h2>
+		<span id="scorecardNum">0!</span>
+		<span>POOR...</span>
+		<p>挑战朋友的呜叫</p>
+		<input type="button" value="呜叫">
+		<input type="button" value="再玩一次" id="btn1">
+		<input type="button" value="菜单" id="btn2">
+	</div>
+	<script src="js/index.js"></script>
+</body>
+</html>

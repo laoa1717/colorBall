@@ -1,0 +1,575 @@
+/*reset*/
+html,body,ul,li,a,p,img{margin: 0;padding:0;}
+a{text-decoration: none;}
+ul{list-style: none;}
+/*common*/
+.common{
+	width: 100%;
+	/*height: 200px;*/
+}
+/*html*/
+html{
+	font-size: 100px;
+	height: 100%;
+}
+/*body*/
+body{
+	font-size: 0.12rem;
+	height: 100%;
+	background: url(../img/bg.jpg);
+	background-size:cover;
+	position: relative;
+	overflow: hidden;
+}
+/*云*/
+#cloud{
+	position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0.77rem;
+    height: 1.51rem;
+    background: url(https://greghub.github.io/coloron/public/svg/clouds.svg) repeat-x;
+    background-position-x: 1.7rem;
+    z-index:12;
+}
+/*p*/
+p{
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 0.14rem;
+}
+/*logo部分*/
+.logo{
+	width: 100%;
+	height:34%;
+	margin-top:1rem;
+	position: relative;
+	z-index:13000;
+}
+.logo_color{
+	width:4rem;
+	height:1.3rem;
+	background:#4c4660;
+	margin:auto;
+	border:4px solid #ff4672; 
+	border-radius:0.6rem;
+	padding: 0.15rem 0.15rem 0.15rem 0.7rem;
+	box-sizing: border-box;
+}
+.logo_color span{
+	font-size:0.6rem;
+	font-weight: bolder;
+	color:white;
+	opacity: 0;
+	transition: 1s;
+}
+.logo_play{
+	width:1.8rem;
+	height:1rem;
+	margin:-0.3rem auto 0;
+}
+.logo_play div{
+	height:0.6rem;
+	width: 100%;
+	border:0.04rem solid #fff;
+	background: #ff4672;
+	box-sizing: border-box;
+	border-radius:1rem; 
+}
+.logo_play div:hover{
+	background-color: #ff5f84;
+}
+.logo_play div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height:0.45rem;
+    text-align: center;
+    color:white;
+    font-size:0.35rem;
+    font-weight: bolder;
+}
+.logo_play p{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top:0.13rem;
+    color:#fff;
+    font-size:0.16rem;
+     font-weight: bolder;
+}
+/*how to play部分*/
+.Toplay{
+   height:2.3rem;
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   /*background: blue;*/
+   display: flex;
+   z-index: 24;
+}
+.Toplay div{
+	height:100%;
+	flex:1;
+	justify-content:space-around;
+}
+.Toplay div p{
+	text-align: center;
+	padding:0.1rem 0 0.2rem 0;
+	font-size:0.17rem;
+	color:#fff;
+}
+.Toplay div .boll{
+	width: 0.45rem;
+	height: 0.45rem;
+	background:#ff4672;
+	border-radius:50%;
+	cursor:pointer;
+}
+.Toplay div:first-child{
+	position: relative;
+}
+.Toplay div:first-child .boll{
+	position: absolute;
+	top:0.75rem;
+	left:50%;
+	transform: translateX(-20px);
+	animation-name:boll;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-delay:1s;
+    opacity:0;
+}
+@keyframes boll{
+   0%{
+      opacity:0;
+   	  display:none;
+      top:0.75rem;
+      background:#ff4672;
+      animation-timing-function:ease-in;
+   }
+   22%{
+      opacity:1;
+      top:1.5rem;
+      background:#ff4672;
+      animation-timing-function:ease-out;
+   }
+   33%{
+      opacity:1;
+   	  top:0.75rem;
+      background:#ffd245;
+      animation-timing-function:ease-in	;
+   }
+   55%{
+      opacity:1;
+	  top:1.5rem;
+      background:#ffd245;
+      animation-timing-function:ease-out;
+   }
+   66%{
+      opacity:1;
+	  top:0.7rem;
+      background:#825ff9;
+      animation-timing-function:ease-in	;
+   }
+   88%{
+      opacity:1;
+      top:1.5rem;
+      background:#825ff9;
+      animation-timing-function:ease-out;
+   }
+   100%{
+      opacity:1;
+	  top:0.75rem;
+      background:#ff4672;
+      animation-timing-function:ease-in	;
+
+   }
+
+}
+
+.Toplay div:nth-child(2) div{
+	width: 1.5rem;
+	height: 1.4rem;
+	display: flex;
+	margin:0.07rem auto 0;
+}
+.Toplay div #one{
+	flex:1;
+	background: #ff4672;
+	height: 1.4rem;
+	border-radius: 0.07rem;
+}
+.Toplay div #two{
+	flex:1;
+	background: #ffd245;
+	height:0.95rem;
+	transform: translateY(0.45rem);
+	border-radius: 0.07rem;
+	margin-top:0.4rem;
+}
+.Toplay div #three{
+	flex:1;
+	background: #8260f5;
+	height: 1.2rem;
+	transform: translateY(0.2rem);
+	border-radius: 0.07rem;
+	margin-top: 0.2rem;
+}
+.Toplay div #one,
+.Toplay div #two,
+.Toplay div #three,
+.Toplay div #four{
+    transform-origin:bottom;
+	animation:two;
+	animation-duration:0.4s;
+    animation-timing-function: ease-out;
+    animation-iteration-count:1;
+    animation-delay:1s;
+    cursor: pointer;
+    transform:scaleY(0);
+    animation-fill-mode:forwards;
+}
+@keyframes two{
+	0%{
+       transform:scaleY(0);
+	}
+	100%{
+       transform:scaleY(1);
+	}
+}
+.Toplay div:nth-child(3) .boll{
+	margin-left:33%;
+	animation:three;
+	animation-duration:1s;
+	animation-delay:1s;
+	opacity:0;
+	animation-fill-mode:forwards;
+}
+ @keyframes three{
+ 	0%{
+       opacity:0;
+ 	}
+ 	100%{
+       opacity:1;
+ 	}
+ }
+.Toplay div:nth-child(3) #four{
+	width:0.5rem;
+	height:1.05rem;
+	background: #ff4672;
+	margin:auto;
+	transform: translateY(0.15rem);
+	border-radius: 0.07rem;
+	transform:scaleY(0);
+}
+#waves,#mounts{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+#waves div, #mounts div {
+    position: absolute;
+    width: 100%;
+}
+#top_wave {
+    background: url(https://greghub.github.io/coloron/public/svg/top_wave.png) repeat-x 0 -1px;
+    height: 0.35rem;
+    bottom: 0;
+    z-index: 10001;
+}
+#wave1 {
+    background: url(https://greghub.github.io/coloron/public/svg/wave1.svg) repeat-x;
+    height: 1.5rem;
+    bottom: 0;
+    z-index: 23;
+}
+#wave2 {
+    background: url(https://greghub.github.io/coloron/public/svg/wave2.svg) repeat-x;
+    height: 1.8rem;
+    bottom: 0.3rem;
+    z-index: 22;
+}
+#wave3 {
+    background: url(https://greghub.github.io/coloron/public/svg/wave3.svg) repeat-x;
+    height: 1.8rem;
+    bottom: 0.9rem;
+    z-index: 21;
+}
+#wave4 {
+    background: url(https://greghub.github.io/coloron/public/svg/wave4.svg) repeat-x;
+    height: 1.8rem;
+    bottom: 1.2rem;
+    z-index: 20;
+}
+#mount1 {
+    background: url(https://greghub.github.io/coloron/public/svg/mount1.svg) repeat-x;
+    height: 1.5rem;
+    bottom: 2.8rem;
+    z-index: 11;
+}
+#mount2 {
+    background: url(https://greghub.github.io/coloron/public/svg/mount2.svg) repeat-x;
+    height: 1.5rem;
+    bottom: 2.9rem;
+    z-index: 10;
+}
+#playBall{
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius:50%;
+	background-color:#ff4672;
+	position:absolute;
+	left:6rem;
+	top:0.8rem;
+	transform:scale(0);
+	z-index:100000;
+}
+#stickBox{
+	width: 100rem;
+	height: 3.8rem;
+	position:absolute;
+	left: 100%;
+	bottom: 0;
+	z-index:1002;
+}
+#stickBox span{
+	display:inline-block;
+	width: 1rem;
+	height: 3.8rem;
+	border-radius:0.14rem;
+	margin-right:1rem;
+	background:#625d74;
+	cursor:pointer;
+	transition:background-color .5s;
+}
+#score{ 
+	width: 1.6rem;
+	height: 1rem;
+	font:bold 0.8rem/1rem '微软雅黑';
+	text-align:center;
+	color:black;
+	position:absolute;
+	right: 0;
+	top:0;
+	z-index:10000;
+	display:none;
+}
+/*计分板*/
+#scorecard{
+	width: 3.5rem;
+	height: 3.1rem;
+	background: rgb(76,70,96);
+	border-radius:0.3rem;
+	position:absolute;
+	z-index:1000000;
+	margin: auto;
+	left:0;top:0;right:0;bottom:0;
+	transform:scale(0);
+}
+#scorecard h2{
+	width: 1.02rem;
+	height: 0.46rem;
+	font-size:0.5rem;
+	color:rgb(255,255,255);
+	margin:0 auto;
+	line-height:0.8rem;
+}
+#scorecard span{
+	margin-top:0.05rem;
+	font-family: '微软雅黑';
+	font-weight: bold;
+	text-align:center;
+	display:block;
+}
+#scorecard span:first-of-type{
+	font-size: 1rem;
+	
+	
+	color:rgb(255,227,69);
+}
+#scorecard span:last-of-type{
+	font-size:0.25rem;
+	margin-top: -0.2rem;
+	color:rgb(255,69,113);
+}
+#scorecard p{
+	font-size:0.14rem;
+	color:white;
+	font-family: '微软雅黑';
+	text-align:center;
+}
+#scorecard input{
+	width: 0.6rem;
+	height: 0.3rem;
+	background: #fff;
+	border:none;
+	border-radius:0.05rem;
+	color:#55ACEE;
+	position:absolute;
+	left:40%;
+	bottom:15%;
+	cursor:pointer;
+}
+#scorecard input:hover{
+	background: rgb(85,172,238);
+	color:#fff;
+}
+#scorecard input:nth-of-type(2),body div input:nth-of-type(3){
+	border:2px solid #fff;
+	border-radius:0.18rem;
+	position:absolute;
+	color:#fff;
+	font-size: 0.2rem;
+	font-weight: bold;
+}
+#scorecard input:nth-of-type(2){
+	width: 1.2rem;
+	height: 0.4rem;
+	background: #FF4571;
+	border:2px solid #fff;
+	border-radius:0.18rem;
+	position:absolute;
+	left:20%;
+	bottom:-6%;
+	color:#fff;
+	font-size: 0.2rem;
+	font-weight: bold;
+}
+#scorecard input:nth-of-type(2):hover{
+	background:#ff5f84;
+}
+#scorecard input:nth-of-type(3){
+	width: 0.8rem;
+	height: 0.4rem;
+	background: rgb(68,191,163);
+	left:60%;
+	bottom:-6%;
+}
+#scorecard #btn2{
+	color:#fff;
+	border: 2px solid #fff;
+	border-radius: 0.18rem;
+}
+#scorecard #btn2:hover{
+	background: #57c6ac;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:640px){
+	.logo{
+		width: 100%;
+		height:34%;
+		margin-top:200px;
+		position: relative;
+	}
+    .logo_color{
+		width:240px;
+		height:80px;
+		border-radius:40px;
+		padding: 15px 15px 15px 25px;
+		border: 2px solid #ff4672;
+	}
+	.logo_color span{
+		font-size:30px;
+	}
+	.logo_play{
+		width:130px;
+		height:65px;
+		margin:-30px auto 0;
+	}
+	.logo_play div{
+		height:50px;
+		width: 100%;
+		border:0.02rem solid #fff;
+		border-radius:40px;
+	}
+	.logo_play div a{
+	    line-height:45px;
+	    font-size:0.25rem;
+	}
+	.logo_play p{
+	    font-size:0.15rem;
+	}
+	.Toplay{
+	   height:190px;
+	}
+	.Toplay div p{
+		font-size:0.15rem;
+	}
+	.Toplay div .boll{
+		width: 35px;
+		height: 35px;
+	}
+	.Toplay div:first-child .boll{
+		top:55px;
+		left:50%;
+		transform: translateX(-13px);
+	}
+
+	@keyframes boll{
+	   0%{
+	      top:55px;
+	      background:#ff4672;
+	   }
+	   22%{
+	      top:125px;
+	      background:#ffd245;
+	   }
+	   33%{
+	   	  top:55px;
+	      background:#825ff9;
+	   }
+	   55%{
+		  top:125px;
+	      background:#825ff9;
+	   }
+	   66%{
+		top:70px;
+	      background:#ff4672;
+	   }
+	   88%{
+	      top:125px;
+	      background:#ff4672;
+	   }
+	   100%{
+			top:55px;
+	      background:#ffd245;
+	   }
+	}
+
+	.Toplay div:nth-child(2) div{
+		width: 105px;
+		height: 150px;
+		display: flex;
+		margin:7px auto 0;
+	}
+	.Toplay div:nth-child(3) #four{
+		width:35px;
+	}
+}
